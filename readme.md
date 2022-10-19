@@ -1,10 +1,13 @@
 # No transaction context
 ```ab -c 100 -n 2000  http://localhost:8080/nontransactional```
+
 Runs without any issues, data stored in DB
 
 # Transaction context
 ```ab -c 100 -n 2000  http://localhost:8080/transactional```
+
 fails after a while...
+
 ```
 org.springframework.transaction.CannotCreateTransactionException: Could not open R2DBC Connection for transaction; nested exception is io.r2dbc.spi.R2dbcTimeoutException: Connection acquisition timed out after 3000ms
 	at org.springframework.r2dbc.connection.R2dbcTransactionManager.lambda$null$5(R2dbcTransactionManager.java:227) ~[spring-r2dbc-5.3.23.jar:5.3.23]
