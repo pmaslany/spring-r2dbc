@@ -74,3 +74,6 @@ Same happens:
 - on other database engines (PostgreSql verified)
 
 Similar issue within micronaut: https://github.com/micronaut-projects/micronaut-data/issues/1019
+
+Spring framework issue: 
+https://github.com/spring-projects/spring-framework/issues/29355
